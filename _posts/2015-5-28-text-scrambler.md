@@ -29,7 +29,7 @@ This should be pretty obvious. Beware that this is after taking 1. into account,
 
 Finally, since we want the words to be as scrambled as possible, each time a word is scrambled, it's compared with the orignal one; if the scrambled word turns out to be identical as before, shuffle it again. However, some words like `been` cannot be rendered different from its original form, so we only reshuffle it 5 times.  
 
-```python scramble_words.py
+```python
 ###### A simple program to scramble words. 
 # Takes input from "scramble_input.txt" and store the result in "scramble_output.txt"
 
