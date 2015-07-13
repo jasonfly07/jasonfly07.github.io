@@ -61,12 +61,14 @@ On the other hand, since different objects have different relfection or refracti
 Brightness is sort of related to luminance, but it's not used as a quantitative measure. We mostly use the term "brightness" as a subjective, qualitative measure of how bright something appears, which is often affected by contrast. For example, your phone screen looks super bright in a dark room, while you can barely see it in direct sunlight.  
 
 **Wait, if luminous flux measures the amount of power, why isn't the unit watt?**  
-Not the amount of power, it's the amount of power of **visible light to our eyes**, which is only a small part of the total spectrum of electromagnetive waves. [Radiant flux](https://en.wikipedia.org/wiki/Radiant_flux), on the other hand, actually measures all radiant energy, so the unit is in Watt.
+Not the amount of power, it's the amount of power of **visible light to our eyes**, which is only a small part of the total spectrum of electromagnetic waves. [Radiant flux](https://en.wikipedia.org/wiki/Radiant_flux), on the other hand, actually measures all radiant energy, so the unit is in Watt.
 
 **Remind me which quantity I should keep in mind when purchasing light bulbs again?**  
-Lumen. By the way, people used to compare lights by watts, but light manufacturers are able to make lights with higher lumen at the same watts.  
+Lumen. By the way, people used to compare lights by watts, but nowadays light manufacturers are able to make lights with higher lumen at the same watts.  
 
 ###References  
-[1] [https://www.wikiwand.com/en/Luminous_flux](https://www.wikiwand.com/en/Luminous_flux).
-
+[1] [Wikipedia on luminous flux.](https://www.wikiwand.com/en/Luminous_flux)  
+[2] [Philips Lighting video on luminance vs illuminance.](https://www.youtube.com/watch?v=2D8wtLRGKYo)  
+[3] [Cleveland.com on light bulb packages.](http://www.cleveland.com/business/index.ssf/2012/04/new_federal_label_for_househol.html)  
+[4] [StudioJPIC on the same topic.](http://www.studiojpic.com/luminance-brightness-photography-word-of-the-week-2/)
 
