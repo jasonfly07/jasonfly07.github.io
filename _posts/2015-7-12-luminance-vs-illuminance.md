@@ -12,7 +12,7 @@ Which unit should I use to describe the brightness of my light bulb? **Lumen**, 
 If you find yourself ask these questions, this article is for you. The following provides a summary of these [confusing terms](https://en.wikipedia.org/wiki/Candela#SI_photometric_light_units). 
 In short, there're really only **4 quantities** (and their accompanying units) that you need to know, and we'll go through them one by one.  
 
-Let's start with a lamp. (and a cat)  
+Let's start with a lamp. (and Elizabeth the cat)  
 
 ###1. Luminous Flux
 
@@ -25,9 +25,22 @@ The unit is **lumen**.
 
 ![_config.yml]({{ site.baseurl }}/images/luminance3.png)
 
-Ok, so now we know how much light the lamp emits in total, but what if we just want to know *how much light it's emitting at a particular direction*? This can be represented with **luminous intensity**, which is simply **luminous flux over a unit solid angle**.  
+Ok, so now we know how much light the lamp emits in total, but what if we just want to know *how much light it's emitting at a particular direction*? This can be represented with **luminous intensity**, which is simply **luminous flux per unit solid angle**.  
 
 The unit is lumen/sr, or **candela**.  
 
 ###3. Illuminance  
 
+![_config.yml]({{ site.baseurl }}/images/luminance4.png)
+
+Forget there's a lamp here; what if we want to know *how much light falls on the desk*? (the light can come from the lamp or other light sources) This can be measured with **illuminance**, which is **luminous flux over per unit area**.  
+
+The unit is lumen/m^2, or **lux**.
+
+###4. Luminance  
+
+![_config.yml]({{ site.baseurl }}/images/luminance5.png)
+
+Why do we care how much light falls on a surface? Because that's how we see every object in the world! **Luminance** is the measure of *how much light can be detected by our eyes looking at a surface at a particular angle*, or roughly *how bright the surface appears*. The formal definition of luminance is **luminous flux per unit solid angle per unit area**.
+
+The unit is lumen/(m^2·sr), or cd/m^2.  
