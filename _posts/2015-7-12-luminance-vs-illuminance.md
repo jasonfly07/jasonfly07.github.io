@@ -20,6 +20,7 @@ Let's start with a lamp. (and Elizabeth the cat)
 
 When you buy a light bulb, the first (and probably the only) thing you want to know is *how much light comes out of the light bulb*. This is expressed with **luminous flux** (or luminous power), which measures **the total amount of power of visible light emitted from the light source**.  
 
+  
 The unit is **lumen**.  
 
 ###2. Luminous Intensity
