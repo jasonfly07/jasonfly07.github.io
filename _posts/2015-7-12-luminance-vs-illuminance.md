@@ -33,7 +33,7 @@ The unit is lumen/sr, or **candela**.
 
 ![_config.yml]({{ site.baseurl }}/images/luminance4.png)
 
-Forget there's a lamp here; what if we want to know *how much light falls on the desk*? (the light can come from the lamp or other light sources) This can be measured with **illuminance**, which is **luminous flux over per unit area**.  
+Forget about the lamp here; what if we want to know *how much light falls on the desk*? (the light can come from the lamp or other light sources) This can be measured with **illuminance**, which is **luminous flux over per unit area**.  
 
 The unit is lumen/m^2, or **lux**.
 
@@ -44,3 +44,29 @@ The unit is lumen/m^2, or **lux**.
 Why do we care how much light falls on a surface? Because that's how we see every object in the world! **Luminance** is the measure of *how much light can be detected by our eyes looking at a surface at a particular angle*, or roughly *how bright the surface appears to Elizabeth*. The formal definition of luminance is **luminous flux per unit solid angle per unit area**.
 
 The unit is lumen/(m^2·sr), or cd/m^2.  
+
+###Summary
+
+Here's the final chart depicting all 4 quantities:  
+
+![_config.yml]({{ site.baseurl }}/images/luminance6.png)
+
+###F.A.Q.  
+
+**So...we use illuminance to measure light hitting a surface, and luminance for light coming from a surface to our eyes? Why use 2 different quantities for them?**  
+Illuminance is indepedent of the surface, so it doesn't matter whether a light is hitting a desk or a wall; the illuminance is the same.  
+On the other hand, since different objects have different relfection or refraction rates, luminance off a desk is probably different from luminance off a wall.
+
+**Does the everyday term "brightness" correspond to any of these quantities?**  
+Brightness is sort of related to luminance, but it's not used as a quantitative measure. We mostly use the term "brightness" as a subjective, qualitative measure of how bright something appears, which is often affected by contrast. For example, your phone screen looks super bright in a dark room, while you can barely see it in direct sunlight.  
+
+**Wait, if luminous flux measures the amount of power, why isn't the unit watt?**  
+Not the amount of power, it's the amount of power of **visible light to our eyes**, which is only a small part of the total spectrum of electromagnetive waves. [Radiant flux](https://en.wikipedia.org/wiki/Radiant_flux), on the other hand, actually measures all radiant energy, so the unit is in Watt.
+
+**Remind me which quantity I should keep in mind when purchasing light bulbs again?**  
+Lumen. By the way, people used to compare lights by watts, but light manufacturers are able to make lights with higher lumen at the same watts.  
+
+###References  
+[1] [https://www.wikiwand.com/en/Luminous_flux](https://www.wikiwand.com/en/Luminous_flux).
+
+
