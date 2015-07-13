@@ -23,8 +23,11 @@ The unit is **lumen**.
 
 ###2. Luminous Intensity
 
+![_config.yml]({{ site.baseurl }}/images/luminance3.png)
 
+Ok, so now we know how much light the lamp emits in total, but what if we just want to know *how much light it's emitting at a particular direction*? This can be represented with **luminous intensity**, which is simply **luminous flux over a unit solid angle**.  
 
-I've seen this trick on Reddit and other sites a few times, and decided to write a simple script that does the scrambling.  
-[Click here to give it a try](http://jasonfly07.github.io/scrambler.html). 
+The unit is lumen/sr, or **candela**.  
+
+###3. Illuminance  
 
