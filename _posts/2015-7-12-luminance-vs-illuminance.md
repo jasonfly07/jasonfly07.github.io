@@ -35,7 +35,7 @@ The unit is lumen/sr, or **candela**.
 
 ![_config.yml]({{ site.baseurl }}/images/luminance4.png)
 
-Forget about the lamp here; what if we want to know *how much light falls on the desk*? (the light can come from the lamp or other light sources) This can be measured with **illuminance**, which is **luminous flux over per unit area**.  
+Forget about the lamp here; what if we want to know *how much light falls on the desk*? (the light can come from the lamp or other light sources) This can be measured with **illuminance**, which is **luminous flux per unit area**.  
 
 The unit is lumen/m^2, or **lux**.
 
