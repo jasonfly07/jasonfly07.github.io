@@ -41,6 +41,6 @@ The unit is lumen/m^2, or **lux**.
 
 ![_config.yml]({{ site.baseurl }}/images/luminance5.png)
 
-Why do we care how much light falls on a surface? Because that's how we see every object in the world! **Luminance** is the measure of *how much light can be detected by our eyes looking at a surface at a particular angle*, or roughly *how bright the surface appears*. The formal definition of luminance is **luminous flux per unit solid angle per unit area**.
+Why do we care how much light falls on a surface? Because that's how we see every object in the world! **Luminance** is the measure of *how much light can be detected by our eyes looking at a surface at a particular angle*, or roughly *how bright the surface appears to Elizabeth*. The formal definition of luminance is **luminous flux per unit solid angle per unit area**.
 
 The unit is lumen/(m^2·sr), or cd/m^2.  
