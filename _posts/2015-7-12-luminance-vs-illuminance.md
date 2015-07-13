@@ -5,9 +5,9 @@ title: Luminance, Illuminance, and All That
 
 ![_config.yml]({{ site.baseurl }}/images/luminance1.png)
 
-What's the difference between **luminance** and **Illuminance**?  
+*What's the difference between **luminance** and **Illuminance**?*  
 
-Which unit should I use to describe the brightness of my light bulb? **Lumen**, **Candela**, or **Lux**?  
+*Which unit should I use to describe the brightness of my light bulb? **Lumen**, **Candela**, or **Lux**?*  
 
 If you find yourself ask these questions, this article is for you. The following provides a summary of these [confusing terms](https://en.wikipedia.org/wiki/Candela#SI_photometric_light_units). 
 In short, there're really only **4 quantities** (and their accompanying units) that you need to know:  
