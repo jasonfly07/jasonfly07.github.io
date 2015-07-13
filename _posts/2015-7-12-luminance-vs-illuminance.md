@@ -1,19 +1,22 @@
 ---
 layout: post
-title: Lumen, Candela and All That
+title: Luminance, Illuminance, and All That
 ---
 
 ![_config.yml]({{ site.baseurl }}/images/luminance1.png)
 
-###Alosmt ervey wrod in tihs scetnnee is mssepielld, but you usdernnatd it aynawy.  
-Thus is the effect of your brain auto-correcting the words. So long as they slightly resemble the correct one (i.e., the *first* and the *last* character are in the right place), you will be able to understand it. Mostly. 
+What's the difference between **luminance** and **olluminance**?  
 
-This is an easy one: **Golgoe** is most likely **Google**.  
-But sometimes it's impossible to recover the word without context: **trhee** is **there** or **three**?
+Which unit should I use to describe the brightness of my light bulb? **Lumen**, **Candela**, or **Lux**?  
 
-[Here's an article](http://wonderopolis.org/wonder/does-your-brain-autocorrect/) on this subject if you're interested.
+If you find yourself ask these questions, this article is for you.  
+The following is a summary of these often times confusing terms.
 
-###Demo
+Let's start with a lamp. (and a cat)
+![_config.yml]({{ site.baseurl }}/images/luminance1.png)
+
+
+###
 I've seen this trick on Reddit and other sites a few times, and decided to write a simple script that does the scrambling.  
 [Click here to give it a try](http://jasonfly07.github.io/scrambler.html). 
 
