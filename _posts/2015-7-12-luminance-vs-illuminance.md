@@ -10,21 +10,23 @@ What's the difference between **luminance** and **Illuminance**?
 Which unit should I use to describe the brightness of my light bulb? **Lumen**, **Candela**, or **Lux**?  
 
 If you find yourself ask these questions, this article is for you. The following provides a summary of these [confusing terms](https://en.wikipedia.org/wiki/Candela#SI_photometric_light_units). 
-In short, there're really only **4 quantities** (and their accompanying units) that you need to know:  
-1. Luminous Flux.  
-2. Luminous Intensity.  
-3. Luminance.  
-4. Illuminance.  
-
-We'll go through them one by one.  
+In short, there're really only **4 quantities** (and their accompanying units) that you need to know, and we'll go through them one by one.  
 
 Let's start with a lamp. (and a cat)  
 
 ![_config.yml]({{ site.baseurl }}/images/luminance1.png)
 
+###1. Luminous Flux
+
+![_config.yml]({{ site.baseurl }}/images/luminance2.png)
+
+When you buy a light bulb, the first (and probably the only) thing you want to know is *how much light comes out of the light bulb*. This is expressed with **luminous flux** (or luminous power), which measures **the total amount of visible light emitted from the light source**.     
+The unit is **lumen**.  
+
+###2. Luminous Intensity
 
 
-###
+
 I've seen this trick on Reddit and other sites a few times, and decided to write a simple script that does the scrambling.  
 [Click here to give it a try](http://jasonfly07.github.io/scrambler.html). 
 
