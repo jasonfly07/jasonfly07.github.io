@@ -1,7 +1,7 @@
 ---
-layout: pages
-title: Posts
-permalink: /posts/
+layout: archive
+title: Archive
+permalink: /archive/
 ---
 
 ![_config.yml]({{ site.baseurl }}/images/brain.png) Text Scrambler & Brain Auto-correct  
