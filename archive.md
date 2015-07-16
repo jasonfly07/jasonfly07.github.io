@@ -4,7 +4,7 @@ title: Archive
 permalink: /archive/
 ---
 
-![_config.yml]({{ site.baseurl }}/images/brain.png) 
+![_config.yml]({{ site.baseurl }}/images/brain3.png) 
 ####Text Scrambler & Brain Auto-correct  
 Ceatre yuor own salebmrcd meagsse wtih tihs tlatloy usseels cnotverer!  
 
