@@ -5,7 +5,7 @@ title: Document Scanner
 
 ![_config.yml]({{ site.baseurl }}/images/document-scanner/evernote.png)
 
-I've been using a lot of the document scanning function in Evernote lately. Since conceptually it seems easy enough to implement, I decide to give it a try and build my own document scanner.
+I've been using a lot of the document scanning function in Evernote lately. Since conceptually it seems easy enough to implement, I decide to give it a try and build my own document scanner in Matlab.  
   
 ###0. The Problem  
 
@@ -29,3 +29,14 @@ Segmentation is a tricky task in the realm of computer vision. Simple, naive met
 3. Apply a threhshold to the gradient magnitude and produce a gradient mask. This will prune out some weak edges, as well as give us a better idea of how these edges are connected.  
 4. Find all the connected components and remove the small ones. This is done so we can (hopefully) completely remove any background edges.  
 5. Find the convex hull of the remaining connected components. The region inside the hull is naturally the foreground.   
+
+The result is a nice, clean mask!  
+
+###2. Finding the Corners  
+We're not done with the first part yet. Since the document (from the current perspective) is a quadrilateral object, ideally we should find its 4 corners in preparation for the geometric transformation in the second part. An intuitive way is to use some corner detection algorithms to directly locate the 4 corners, but this will not work if the document has rounded corners, such as credit cards.  
+A better way to do this is to detect the 4 lines around the borders, and compute the intersections of these lines that fall within the image.  
+
+6. Apply edge detection to the foreground mask. We should now have all the line segments around the borders.
+7. Use Hough transform to identify all the line segments. Matlab provides both `hough()` and `houghlines()` that can be called back-to-back.  
+8. Locate the intersections of these lines. By pruning out the intersection points that are outside image boundaries, we should ideally be left with the 4 corners of the document.  
+
