@@ -5,7 +5,7 @@ title: Build Your Own Document Scanner
 
 ![_config.yml]({{ site.baseurl }}/images/document-scanner/evernote.png)
 
-I've been using a lot of the document scanning function in Evernote lately. If you have never used it (or Apps with similar functions) before, what it does is look for the document in the picture and modify it so the document looks like it's captured by a scanner. 
+I've been using a lot of the document scanning function in Evernote lately. If you have never used it (or Apps with similar functions) before, what it does is look for the document in the picture and modify it so the document looks like it's captured by a scanner.  
 Since conceptually it seems easy enough to implement, I decide to give it a try and build my own document scanner in Matlab.  
   
 ###0. The Problem  
@@ -35,6 +35,7 @@ The result is a nice, clean mask!
 
 ###2. Finding the Corners  
 We're not done with the first part yet. Since the document (from the current perspective) is a quadrilateral object, ideally we should find its 4 corners in preparation for the geometric transformation in the second part. An intuitive way is to use some corner detection algorithms to directly locate the 4 corners, but this will not work if the document has rounded corners, such as credit cards.  
+
 A better way to do this is to detect the 4 lines around the borders, and compute the intersections of these lines that fall within the image.  
 
 ![_config.yml]({{ site.baseurl }}/images/document-scanner/sf2.png)
