@@ -37,7 +37,9 @@ The result is a nice, clean mask!
 We're not done with the first part yet. Since the document (from the current perspective) is a quadrilateral object, ideally we should find its 4 corners in preparation for the geometric transformation in the second part. An intuitive way is to use some corner detection algorithms to directly locate the 4 corners, but this will not work if the document has rounded corners, such as credit cards.  
 A better way to do this is to detect the 4 lines around the borders, and compute the intersections of these lines that fall within the image.  
 
-6. Apply edge detection to the foreground mask. We should now have all the line segments around the borders.
-7. Use Hough transform to identify all the line segments. Matlab provides both `hough()` and `houghlines()` that can be called back-to-back.  
-8. Locate the intersections of these lines. By pruning out the intersection points that are outside image boundaries, we should ideally be left with the 4 corners of the document.  
+![_config.yml]({{ site.baseurl }}/images/document-scanner/sf2.png)
+
+1. Apply edge detection to the foreground mask. We should now have all the line segments around the borders.
+2. Use Hough transform to identify all the line segments. Matlab provides both `hough()` and `houghlines()` that can be called back-to-back.  
+3. Locate the intersections of these lines. By pruning out the intersection points that are outside image boundaries, we should ideally be left with the 4 corners of the document.  
 
