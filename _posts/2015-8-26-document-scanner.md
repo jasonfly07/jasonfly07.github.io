@@ -5,28 +5,29 @@ title: Document Scanner in Matlab
 
 ![_config.yml]({{ site.baseurl }}/images/document-scanner/evernote.png)
 
-I've been using a lot of the document scanning function in Evernote lately. If you have never used it (or Apps with similar functions) before, what it does is capture the document in the picture and modify it so the document looks like it's captured by a scanner.  
+I've been using a lot of the document scanning function in Evernote lately. If you have never used it before (or Apps with similar functions), what it does is capture the document in the picture and modify it so the document looks like it's captured by a scanner.  
+
 Since conceptually it seems easy enough to implement, I decide to give it a try and build my own document scanner.  
 
-[Here's the whole implementation in Matlab.](https://github.com/jasonfly07/matlab_ws/tree/master/document_scanner) 
+[Here's the whole implementation in Matlab.](https://github.com/jasonfly07/matlab_ws/tree/master/document_scanner)  
 
 ###0. The Problem  
 
 ![_config.yml]({{ site.baseurl }}/images/document-scanner/sf0.jpg)
 
-Let's start with this picture of a postcard. The task is to *cut out* the card and *modify* it as if it's viewed from the top down.  
+Let's start with this picture of a postcard. The goal is to *cut out* the card and *modify* it as if it's viewed from the top down.  
 There are 2 parts to this problem:  
-A. How do we **find the boundary** of the document from an image?  
-B. Once we know where it is, how do we **normalize the perspective** viewing the document?  
+1. How do we **find the boundary** of the document from an image?  
+2. Once we know where it is, how do we **normalize the perspective** viewing the document?  
 
-There are also 2 assumptions we can make to make it easier:  
-A. The card is the **main object** of the image; we don't have to worry about another rectangular-shaped object being present that's gonna confuse the algorithm.  
-B. The **contrast** between the card and background is sufficiently high.  
+There are also 2 assumptions to make it easier:  
+1. The card is the **main object** of the image; we don't have to worry about another rectangular-shaped object being present that's gonna confuse the algorithm.  
+2. The **contrast** between the card and background is sufficiently high.  
 
 ###1. Segmenting Out the Document  
 The first part of the problem can be thought of as a segmentation task: the image consists of the document (foreground) and the surface it's placed on (background), and we have to **extract the foreground** out of the image.  
 
-Segmentation is a tricky task in the realm of computer vision. Simple, naive methods often aren't robust enough, while more sophisticated approaches are usually slow and require a lot of parameter tuning. That being said, because of the 2 assumptions above, the following approach should produce decent enough results.  
+Segmentation is a tricky task in the realm of computer vision. Simple, naive methods often aren't robust enough, while more sophisticated approaches are usually slow and require a lot of parameter tuning. That being said, because of the 2 assumptions above, the following simple approach should produce decent enough results.  
 
 ![_config.yml]({{ site.baseurl }}/images/document-scanner/sf1.png)
 
@@ -94,7 +95,7 @@ That'll work. If we first detect all the lines (as shown below), compute all poi
 
 ![_config.yml]({{ site.baseurl }}/images/document-scanner/sf4.png)
 
-However, there's a scenario that will potentially break this approach: if there's a diagonal line lying on the document, that line will likely intersect with one of the borders **outside the quadrilateral**. I don't have any test case to verify this, though.  
+However, there's a scenario that will potentially break this approach: if there's a diagonal line lying on the document, that line will likely intersect with one of the borders **outside the quadrilateral**.    
 
 **Is there a way to detect the lines other than Hough transform?**  
 I've also tried RANSAC + linear square fit, and the results are comparable. I eventually pick Hough transform simply because it's fewer lines in Matlab.   
