@@ -17,12 +17,10 @@ Since conceptually it seems easy enough to implement, I decide to give it a try 
 
 Let's start with this picture of a postcard. The goal is to *cut out* the card and *modify* it as if it's viewed from the top down.  
 There are 2 parts to this problem:  
-
 1. How do we **find the boundary** of the document from an image?  
 2. Once we know where it is, how do we **normalize the perspective** viewing the document?  
 
 There are also 2 assumptions to make it easier:  
-
 1. The card is the **main object** of the image; we don't have to worry about another rectangular-shaped object being present that's gonna confuse the algorithm.  
 2. The **contrast** between the card and background is sufficiently high.  
 
