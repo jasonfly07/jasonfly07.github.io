@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Build Your Own Document Scanner
+title: Document Scanner in Matlab
 ---
 
 ![_config.yml]({{ site.baseurl }}/images/document-scanner/evernote.png)
