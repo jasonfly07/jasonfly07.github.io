@@ -5,7 +5,7 @@ title: Document Scanner in Matlab
 
 ![_config.yml]({{ site.baseurl }}/images/document-scanner/evernote.png)
 
-I've been using a lot of the document scanning function in Evernote lately. If you have never used it before (or Apps with similar functions), what it does is capture the document in the picture and modify it so the document looks like it's captured by a scanner.  
+I've been using a lot of the document scanning function in Evernote lately. If you have never used it before (or apps with similar functions), what it does is capture the document in the picture and modify it so the document looks like it's captured by a scanner.  
 
 Since conceptually it seems easy enough to implement, I decide to give it a try and build my own document scanner.  
 
@@ -34,7 +34,7 @@ Segmentation is a tricky task in the realm of computer vision. Simple, naive met
 1. Convert the image to grayscale & blur it a bit for denoising.  
 2. Compute the **gradient magnitude** of the grayscale image. This will essentially reveal all 
    the **edges** on the image.  
-3. Apply a threhshold to the gradient magnitude and produce a gradient mask. This will prune out some weak edges, as well as give us a better idea of how these edges are connected.  
+3. Apply a threhshold to the gradient magnitude and produce a **gradient mask**. This will prune out some weak edges, as well as give us a better idea of how these edges are connected.  
 4. Find all the **connected components** and remove the small ones. This is done so we can (hopefully) completely remove any background edges.  
 5. Find the **convex hull** of the remaining connected components. The region inside the hull is naturally the foreground.   
 
@@ -74,7 +74,7 @@ Looking good! We can cut out the postcard to get a cleaner result, but I decide 
 
 ###4. More Test Results  
 
-Let's test this pipeline with a few other examples. How about a post-it note?  
+Let's test this pipeline with a few other examples. How about a post-it note?   
 
 ![_config.yml]({{ site.baseurl }}/images/document-scanner/lenny.png)
 
@@ -86,7 +86,9 @@ Another membership card:
 
 ![_config.yml]({{ site.baseurl }}/images/document-scanner/giant.png)
 
-Although these results look great, I imageine you can easily break the algorithm with slightly more complex images. 
+Although these results look great, I imagine you can easily break the algorithm with slightly more complex images.  
+
+And...that wraps up the whole pipeline! I'm sure those commercial apps use more sophisticated ways to handle corner cases, but the basic idea is the same.  
 
 ###5. FAQ  
 
@@ -95,12 +97,13 @@ That'll work. If we first detect all the lines (as shown below), compute all poi
 
 ![_config.yml]({{ site.baseurl }}/images/document-scanner/sf4.png)
 
-However, there's a scenario that will potentially break this approach: if there's a diagonal line lying on the document, that line will likely intersect with one of the borders **outside the quadrilateral**.    
+However, there's one scenario that will potentially break this approach: if there's a diagonal line lying on the document, that line will likely intersect with one of the borders **outside the quadrilateral**.    
 
 **Is there a way to detect the lines other than Hough transform?**  
 I've also tried RANSAC + linear square fit, and the results are comparable. I eventually pick Hough transform simply because it's fewer lines in Matlab.   
 
 **I ran your Matlab script with my own image; it doesn't work at all!**  
 There're mainly 2 factors that will mess up the segmentation: the resolution of Hough transform and the threshold on gradient magnitude. Try tweaking those values, or resize your image to similar resolution as the postcard example.  
+
 Besides that, there might be other bugs/design overlook, and you're more than welcome to test the pipeline yourself and improve its robustness.  
 
