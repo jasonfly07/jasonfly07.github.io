@@ -17,17 +17,19 @@ Since conceptually it seems easy enough to implement, I decide to give it a try 
 
 Let's start with this picture of a postcard. The goal is to *cut out* the card and *modify* it as if it's viewed from the top down.  
 There are 2 parts to this problem:  
+
 1. How do we **find the boundary** of the document from an image?  
 2. Once we know where it is, how do we **normalize the perspective** viewing the document?  
-
-There are also 2 assumptions to make it easier:  
-1. The card is the **main object** of the image; we don't have to worry about another rectangular-shaped object being present that's gonna confuse the algorithm.  
-2. The **contrast** between the card and background is sufficiently high.  
 
 ###1. Segmenting Out the Document  
 The first part of the problem can be thought of as a segmentation task: the image consists of the document (foreground) and the surface it's placed on (background), and we have to **extract the foreground** out of the image.  
 
-Segmentation is a tricky task in the realm of computer vision. Simple, naive methods often aren't robust enough, while more sophisticated approaches are usually slow and require a lot of parameter tuning. That being said, because of the 2 assumptions above, the following simple approach should produce decent enough results.  
+Segmentation is a tricky task in the realm of computer vision. Simple, naive methods often aren't robust enough, while more sophisticated approaches are usually slow and require a lot of parameter tuning. That being said, there are 2 assumptions we can make in this particular application:  
+
+1. The card is the **main object** of the image; we don't have to worry about another rectangular-shaped object being present that's gonna confuse the algorithm. 
+2. The **contrast** between the card and background is sufficiently high. 
+
+By exploiting these 2 characteristics, we should be able to produce decent segmentation results with the following approach that's relatively simple.  
 
 ![_config.yml]({{ site.baseurl }}/images/document-scanner/sf1.png)
 
