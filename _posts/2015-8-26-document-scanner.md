@@ -59,10 +59,27 @@ The rightmost one, **projective** trasform (or **homography**), is what we want 
 ![_config.yml]({{ site.baseurl }}/images/document-scanner/cmu.png)
 
 What we want to achieve is the opposite of that: namely, given an arbitrary quadrilateral (represented with 4 points), we want to project it back to its rectangular form (another set of 4 points). This task is called **homography estimation**. 
-Since how it's computed is beyond the scope of this article, [here's a detailed document on the process.](http://cseweb.ucsd.edu/classes/wi07/cse252a/homography_estimation/homography_estimation.pdf)  
+Since how it's computed is beyond the scope of this article, [here's a detailed handout on the process.](http://cseweb.ucsd.edu/classes/wi07/cse252a/homography_estimation/homography_estimation.pdf)  
 
+After homography transformation, here's the final result:  
 
+![_config.yml]({{ site.baseurl }}/images/document-scanner/sf3.png)
 
+Looking good! We can cut out the postcard to get a cleaner result, but I decide to keep the whole image to demonstrate how it's skewed after such transformation.  
+
+###4. More Test Results  
+
+Let's test this pipeline with a few other examples. How about a post-it note?  
+
+![_config.yml]({{ site.baseurl }}/images/document-scanner/lenny.png)
+
+Or a membership card:  
+
+![_config.yml]({{ site.baseurl }}/images/document-scanner/costco.png)
+
+Another membership card:  
+
+![_config.yml]({{ site.baseurl }}/images/document-scanner/giant.png)
 
 
 
