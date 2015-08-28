@@ -96,7 +96,7 @@ That'll work. If we first detect all the lines (as shown below), compute all poi
 
 However, there's a scenario that will potentially break this approach: if there's a diagonal line lying on the document, that line will likely intersect with one of the borders **outside the quadrilateral**. I don't have any test case to verify this, though.  
 
-**Is there a way to detect the lines other than Hough transform?  
+**Is there a way to detect the lines other than Hough transform?**  
 I've also tried RANSAC + linear square fit, and the results are comparable. I eventually pick Hough transform simply because it's fewer lines in Matlab.   
 
 **I ran your Matlab script with my own image; it doesn't work at all!**  
