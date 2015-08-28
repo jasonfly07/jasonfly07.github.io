@@ -8,7 +8,7 @@ title: Document Scanner in Matlab
 I've been using a lot of the document scanning function in Evernote lately. If you have never used it (or Apps with similar functions) before, what it does is capture the document in the picture and modify it so the document looks like it's captured by a scanner.  
 Since conceptually it seems easy enough to implement, I decide to give it a try and build my own document scanner.  
 
-Here's the whole implementation in Matlab. 
+[Here's the whole implementation in Matlab.](https://github.com/jasonfly07/matlab_ws/tree/master/document_scanner) 
 
 ###0. The Problem  
 
