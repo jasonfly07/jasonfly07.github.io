@@ -6,8 +6,10 @@ title: Build Your Own Document Scanner
 ![_config.yml]({{ site.baseurl }}/images/document-scanner/evernote.png)
 
 I've been using a lot of the document scanning function in Evernote lately. If you have never used it (or Apps with similar functions) before, what it does is look for the document in the picture and modify it so the document looks like it's captured by a scanner.  
-Since conceptually it seems easy enough to implement, I decide to give it a try and build my own document scanner in Matlab.  
-  
+Since conceptually it seems easy enough to implement, I decide to give it a try and build my own document scanner.  
+
+Here's the whole implementation in Matlab. 
+
 ###0. The Problem  
 
 ![_config.yml]({{ site.baseurl }}/images/document-scanner/sf0.jpg)
@@ -47,6 +49,18 @@ A more robust way to do this is to detect the 4 lines around the borders, and co
 Now that we have the 4 corners of the document, we're ready to move on to the second part.  
 
 ###3. Normalize the Perspective  
+
+Since images are essentially 2-dimensional matrices, if we multiply every point on it with a 2D transformation matrix, we can move the image around, rotate the image, or skew its scale. This is best illustrated with the following diagram:  
+
+![_config.yml]({{ site.baseurl }}/images/document-scanner/projective.png)
+
+The rightmost one, **projective** trasform (or **homography**), is what we want to use, as it's the most general form of 2D linear transformation. Applying an arbitrary projective matrix to a normal image will usually turn it into a funny quadrilateral, like this:  
+ 
+![_config.yml]({{ site.baseurl }}/images/document-scanner/cmu.png)
+
+What we want to achieve is the opposite of that: namely, given an arbitrary quadrilateral (represented with 4 points), we want to project it back to its rectangular form (another set of 4 points). This task is called **homography estimation**. 
+Since how it's computed is beyond the scope of this article, [here's a detailed document on the process.](http://cseweb.ucsd.edu/classes/wi07/cse252a/homography_estimation/homography_estimation.pdf)  
+
 
 
 
