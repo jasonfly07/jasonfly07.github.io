@@ -5,7 +5,7 @@ title: Document Scanner in Matlab
 
 ![_config.yml]({{ site.baseurl }}/images/document-scanner/evernote.png)
 
-I've been using a lot of the document scanning function in Evernote lately. If you have never used it (or Apps with similar functions) before, what it does is look for the document in the picture and modify it so the document looks like it's captured by a scanner.  
+I've been using a lot of the document scanning function in Evernote lately. If you have never used it (or Apps with similar functions) before, what it does is capture the document in the picture and modify it so the document looks like it's captured by a scanner.  
 Since conceptually it seems easy enough to implement, I decide to give it a try and build my own document scanner.  
 
 Here's the whole implementation in Matlab. 
@@ -19,10 +19,14 @@ There are 2 parts to this problem:
 A. How do we **find the boundary** of the document from an image?  
 B. Once we know where it is, how do we **normalize the perspective** viewing the document?  
 
-###1. Segmenting Out the Document  
-The first part of the problem can be thought of as a segmentation problem: the image consists of the document (foreground) and the surface it's placed on (background), and we have to **extract the foreground** out of the image.  
+There are also 2 assumptions we can make to make it easier:  
+A. The card is the **main object** of the image; we don't have to worry about another rectangular-shaped object being present that's gonna confuse the algorithm.  
+B. The **contrast** between the card and background is sufficiently high.  
 
-Segmentation is a tricky task in the realm of computer vision. Simple, naive methods often aren't robust enough, while more sophisticated approaches are usually slow and require a lot of parameter tuning. The following approach is by no means the most ideal way of performing segmentation in this context, but it should produce decent enough results.  
+###1. Segmenting Out the Document  
+The first part of the problem can be thought of as a segmentation task: the image consists of the document (foreground) and the surface it's placed on (background), and we have to **extract the foreground** out of the image.  
+
+Segmentation is a tricky task in the realm of computer vision. Simple, naive methods often aren't robust enough, while more sophisticated approaches are usually slow and require a lot of parameter tuning. That being said, because of the 2 assumptions above, the following approach should produce decent enough results.  
 
 ![_config.yml]({{ site.baseurl }}/images/document-scanner/sf1.png)
 
@@ -44,17 +48,17 @@ A more robust way to do this is to detect the 4 lines around the borders, and co
 
 1. Apply edge detection to the foreground mask. We should now have all the line segments around the borders.
 2. Use Hough transform to identify all the line segments. Matlab provides both `hough()` and `houghlines()` that can be called back-to-back.  
-3. Locate the intersections of these lines. By pruning out the intersection points that are outside image boundaries, we should ideally be left with the 4 corners of the document.  
+3. Locate the intersections of these lines. By pruning out the points of intersection that are outside image boundaries, we should ideally be left with the 4 corners of the document.  
 
 Now that we have the 4 corners of the document, we're ready to move on to the second part.  
 
 ###3. Normalize the Perspective  
 
-Since images are essentially 2-dimensional matrices, if we multiply every point on it with a 2D transformation matrix, we can move the image around, rotate the image, or skew its scale. This is best illustrated with the following diagram:  
+Since images are essentially 2-dimensional matrices, if we multiply every point on it with a 2D transformation matrix, we can shift the image around, rotate it, or skew its scale. This is best illustrated with the following diagram:  
 
 ![_config.yml]({{ site.baseurl }}/images/document-scanner/projective.png)
 
-The rightmost one, **projective** trasform (or **homography**), is what we want to use, as it's the most general form of 2D linear transformation. Applying an arbitrary projective matrix to a normal image will usually turn it into a funny quadrilateral, like this:  
+The rightmost one, **projective** trasform (or **homography**), is what we're looking for, as it's the most general form of 2D linear transformation. Applying an arbitrary homography matrix to a normal image will usually turn it into a funny quadrilateral, like this:  
  
 ![_config.yml]({{ site.baseurl }}/images/document-scanner/cmu.png)
 
@@ -81,5 +85,21 @@ Another membership card:
 
 ![_config.yml]({{ site.baseurl }}/images/document-scanner/giant.png)
 
+Although these results look great, I imageine you can easily break the algorithm with slightly more complex images. 
 
+###5. FAQ  
+
+**Why segmenting out the card first? Can't you simply apply Hough transform to the grayscale image and locate all the lines?**  
+That'll work. If we first detect all the lines (as shown below), compute all points of intersections, and fit a convex hull to them, we can still obtain the quadrilateral.  
+
+![_config.yml]({{ site.baseurl }}/images/document-scanner/sf4.png)
+
+However, there's a scenario that will potentially break this approach: if there's a diagonal line lying on the document, that line will likely intersect with one of the borders **outside the quadrilateral**. I don't have any test case to verify this, though.  
+
+**Is there a way to detect the lines other than Hough transform?  
+I've also tried RANSAC + linear square fit, and the results are comparable. I eventually pick Hough transform simply because it's fewer lines in Matlab.   
+
+**I ran your Matlab script with my own image; it doesn't work at all!**  
+There're mainly 2 factors that will mess up the segmentation: the resolution of Hough transform and the threshold on gradient magnitude. Try tweaking those values, or resize your image to similar resolution as the postcard example.  
+Besides that, there might be other bugs/design overlook, and you're more than welcome to test the pipeline yourself and improve its robustness.  
 
