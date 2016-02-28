@@ -15,7 +15,7 @@ But sometimes it's impossible to recover the word without context: **trhee** is 
 
 ###Demo
 I've seen this trick on Reddit and other sites a few times, and decided to write a simple script that does the scrambling.  
-[Click here to give it a try](http://jasonfly07.github.io/scrambler.html). 
+[Click here to give it a try](http://jasonfly07.github.io/special/text-scrambler/scrambler.html). 
 
 
 ###Implementation
