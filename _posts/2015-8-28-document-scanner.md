@@ -11,7 +11,7 @@ Since conceptually it seems easy enough to implement, I decide to give it a try 
 
 [Here's the whole implementation in Matlab.](https://github.com/jasonfly07/matlab_ws/tree/master/document_scanner)  
 
-###0. The Problem  
+### 0. The Problem  
 
 ![_config.yml]({{ site.baseurl }}/images/document-scanner/sf0.jpg)
 
@@ -21,7 +21,7 @@ There are 2 parts to this problem:
 1. How do we **find the boundary** of the document from an image?  
 2. Once we know where it is, how do we **normalize the perspective** viewing the document?  
 
-###1. Segmenting Out the Document  
+### 1. Segmenting Out the Document  
 The first part of the problem can be thought of as a segmentation task: the image consists of the document (foreground) and the surface it's placed on (background), and we have to **extract the foreground** out of the image.  
 
 Segmentation is a tricky task in the realm of computer vision. Simple, naive methods often aren't robust enough, while more sophisticated approaches are usually slow and require a lot of parameter tuning. That being said, there are 2 assumptions we can make in this particular application:  
@@ -42,7 +42,7 @@ By exploiting these 2 characteristics, we should be able to produce decent segme
 
 The result is a nice, clean mask!  
 
-###2. Find the Corners  
+### 2. Find the Corners  
 We're not done with the first part yet. Since the document (from the current perspective) is a quadrilateral object, we want to find the 4 corners around it. An intuitive way is to use some corner detection algorithms to directly locate the corners, but this will not work if the document has rounded corners, such as credit cards.  
 
 A more robust way to do this is to detect the 4 lines around the borders, and compute the intersections of these lines that fall within the image.  
@@ -55,7 +55,7 @@ A more robust way to do this is to detect the 4 lines around the borders, and co
 
 Now that we have the 4 corners of the document, we're ready to move on to the second part.  
 
-###3. Normalize the Perspective  
+### 3. Normalize the Perspective  
 
 Since images are essentially 2-dimensional matrices, if we multiply every point on it with a 2D transformation matrix, we can shift the image around, rotate it, or skew its scale. This is best illustrated with the following diagram:  
 
@@ -74,7 +74,7 @@ After homography transformation, here's the final result:
 
 Looking good! We can cut out the postcard to get a cleaner result, but I decide to keep the whole image to demonstrate how it's skewed after such transformation.  
 
-###4. More Test Results  
+### 4. More Test Results  
 
 Let's test this pipeline with a few other examples. How about a post-it note?   
 
@@ -92,7 +92,7 @@ Although these results look great, I imagine you can easily break the algorithm 
 
 And...that wraps up the whole pipeline! I'm sure those commercial apps use more sophisticated ways to handle corner cases, but the basic idea is the same.  
 
-###5. FAQ  
+### 5. FAQ  
 
 **Why segmenting out the card first? Can't you simply apply Hough transform to the grayscale image and locate all the lines?**  
 That'll work. If we first detect all the lines (as shown below), compute all points of intersections, and fit a convex hull to them, we can still obtain the quadrilateral.  

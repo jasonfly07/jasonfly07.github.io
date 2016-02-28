@@ -14,7 +14,7 @@ In short, there're really only **4 quantities** (and their accompanying units) t
 
 Let's start with a lamp. (and Elizabeth the cat)  
 
-###1. Luminous Flux
+### 1. Luminous Flux
 
 ![_config.yml]({{ site.baseurl }}/images/luminance2.png)
 
@@ -23,7 +23,7 @@ When you buy a light bulb, the first (and probably the only) thing you want to k
   
 The unit is **lumen**.  
 
-###2. Luminous Intensity
+### 2. Luminous Intensity
 
 ![_config.yml]({{ site.baseurl }}/images/luminance3.png)
 
@@ -31,7 +31,7 @@ Ok, so now we know how much light the lamp emits in total, but what if we just w
 
 The unit is lumen/sr, or **candela**.  
 
-###3. Illuminance  
+### 3. Illuminance  
 
 ![_config.yml]({{ site.baseurl }}/images/luminance4.png)
 
@@ -39,7 +39,7 @@ Forget about the lamp here; what if we want to know *how much light falls on the
 
 The unit is lumen/m^2, or **lux**.
 
-###4. Luminance  
+### 4. Luminance  
 
 ![_config.yml]({{ site.baseurl }}/images/luminance5.png)
 
@@ -47,13 +47,13 @@ Why do we care how much light falls on a surface? Because that's how we see ever
 
 The unit is lumen/(m^2·sr), or cd/m^2.  
 
-###Summary
+### Summary
 
 Here's the final chart depicting all 4 quantities:  
 
 ![_config.yml]({{ site.baseurl }}/images/luminance6.png)
 
-###F.A.Q.  
+### F.A.Q.  
 
 **So...we use illuminance to measure light hitting a surface, and luminance for light coming from a surface to our eyes? Why use 2 different quantities for them?**  
 Illuminance is indepedent of the surface, so it doesn't matter whether a light is hitting a desk or a wall; the illuminance is the same.  
@@ -68,7 +68,7 @@ Not the amount of power, it's the amount of power of **visible light to our eyes
 **Remind me which quantity I should keep in mind when purchasing light bulbs again?**  
 Lumen. By the way, people used to compare lights by watts, but nowadays light manufacturers are able to make lights with higher lumen at the same watts.  
 
-###References  
+### References  
 [1] [Wikipedia on luminous flux.](https://www.wikiwand.com/en/Luminous_flux)  
 [2] [Philips Lighting video on luminance vs illuminance.](https://www.youtube.com/watch?v=2D8wtLRGKYo)  
 [3] [Cleveland.com on light bulb packages.](http://www.cleveland.com/business/index.ssf/2012/04/new_federal_label_for_househol.html)  
