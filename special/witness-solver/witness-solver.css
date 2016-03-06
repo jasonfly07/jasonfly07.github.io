@@ -1,0 +1,16 @@
+.solverIO {
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+h1 {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 30px;
+}
+
+button {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 18px;
+	width: 100px;
+	height: 40px;
+}
