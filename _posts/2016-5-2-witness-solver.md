@@ -11,7 +11,7 @@ In case you haven't heard about it, [The Witness is an excellent video game.](ht
 
 All the puzzles in The Witness take the form of path-searching on a rectangular maze. By drawing a path from start to finish, you complete the puzzle by satisfying specific rules. These rules can roughly be divided into 2 groups: **symbolic** and **environmental**. The former comes with symbols on the maze to satisfy (e.g., a black hexagon has to be traversed by the path), while the latter hides its rules and clues in the environment (e.g., the path is indicated by the reflection of sunshine).
 
-It's a joy to figure out the rules of both, but after a while I found myself looking forward to environmental puzzles more than the symbolic ones. A lot of these symbolic puzzles, ranging from simple path-finding to complex Hamiltonian-cycle problems, can be solved with brute-force approaches. As I sat there, cutting up small Tetris pieces to figure out a particular torturous Tetris-fitting puzzle, I wonder if this process can be automated. 
+It's a joy to figure out the rules of both, but after a while I found myself looking forward to environmental puzzles more than the symbolic ones. A lot of these symbolic puzzles, ranging from simple path-finding to complex segmentation problems, can be solved with brute-force approaches. As I sat there cutting up small Tetris pieces to figure out a particular torturous Tetris-fitting puzzle, I wonder if this process can be automated. 
 
 This was when I decided to build a solver to handle some of these puzzles for me. [**The preliminary version is complete, and you can try it here.**](http://jasonfly07.github.io/the-witness-solver-js/)
 
@@ -80,6 +80,8 @@ Also, if there are black & white blocks next to each other, then the path has to
 ![_config.yml]({{ site.baseurl }}/images/witness/witness-gui.png)
 
 As I fleshed out the underlying solver (it was written in C++ first), I was frustrated by the fact that there's no user interface for this tool. Eventually I decided to port everything to Javascript, and built a GUI in the form of a website. Since I had next to zero knowledge on HTML/CSS at first, it took me a while to get everything look right. 
+
+(One minor thing to point out is that essential nodes/sides are hexagons in the game, but since drawing a hexagon is not trivial with CSS, I replace it with a small dot.)
 
 Once the GUI is done, I restarted the game and ran a couple of the early puzzles through the solver. There's something satisfying about playing the game this way: building a solver is just as challenging and fun as solving these puzzles yourself. 
 
