@@ -132,7 +132,7 @@ The volume ratio of a hypersphere (N-dim sphere) to a hypercube (N-dim cube) is 
 
 **I still don't really understand probability integral transform. Why would plugging a random variable into its own CDF result in a uniform distribtion? What's the intuition behind it?**  
 
-Here's my take on it: say the class takes an exam, and distribution of the scores $$X$$ is the exponential distribution with $$λ = 1$$ (don't ask):
+Here's my take on it: say the class takes an exam, and distribution of the scores $$X$$ is the exponential distribution with $$λ = 0.05$$ (don't ask):
 
 ![_config.yml]({{ site.baseurl }}/images/sphere-random-point/random-exp-1.png)
 
