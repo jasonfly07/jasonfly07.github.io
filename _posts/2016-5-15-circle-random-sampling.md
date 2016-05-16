@@ -31,7 +31,9 @@ This is called **rejection sampling**. It's fast and reliable in practice; the o
 
 The second approach switches back to polar coordinates: once we pick a random $$θ$$, we can treat the selected slice as an infinitesimal triangle $$OAB$$, with $$O$$ as the origin and $$A$$ & $$B$$ on the border. The three sides of this triangle are: $$R$$, $$R$$, and $$Rdθ$$. Now we can convert this problem into [random point picking on a triangle](http://mathworld.wolfram.com/TrianglePointPicking.html). 
 
-By generating a random $$r1$$ on $$\overline{OA}$$ and a random $$r2$$ on $$\overline{OB}$$ (both in $$[0, R]$$), we can form a quadrilateral $$OACB$$ and use $$C$$ as our random point. If $$C$$ is outside the triangle, we fold it back. In fact, since $$\overline{AB}$$ is next to 0, all four points of the quadrilateral are virtually on the same line, and we simply sum up $$r1$$ and $$r2$$ to generate the random point (and fold it back if needed).
+By generating a random $$r1$$ on $$\overline{OA}$$ and a random $$r2$$ on $$\overline{OB}$$ (both in $$[0, R]$$), we can form a quadrilateral $$OACB$$ and use $$C$$ as our random point. If $$C$$ is outside the triangle, we fold it back. 
+
+In fact, since $$\overline{AB}$$ is next to 0, all four points of the quadrilateral are virtually on the same line, and we simply sum up $$r1$$ and $$r2$$ to generate the random point (and fold it back if needed).
 
 ### 3. Inverse CDF
 
@@ -140,4 +142,4 @@ To achieve a uniform distributed output, we want equal amount of students in eac
 
 ![_config.yml]({{ site.baseurl }}/images/sphere-random-point/random-exp-2.png)
 
-Note that the green segment has a wider range of score than the orange segment. Does that mean the probabilty of a student landing in the green segment is higher than the orange segment? No! Becasue according the distribution of the scores on the PDF, there're far more students having scores in $$[4.46, 10.21]$$ than $$[18.32, 32.18]$$! So the probabilty and the range sort of cancel out each other, and you would get a nice uniform distribution in the end.
+Note that the green segment has a wider range of score than the orange segment. Does that mean the score of a random student is more likely to land in the green segment instead of the orange segment? No! Becasue according the distribution of the scores on the PDF, there're far more students having scores in $$[4.46, 10.21]$$ than $$[18.32, 32.18]$$! So the probabilty and the range sort of cancel out each other, and you would get a nice uniform distribution in the end.
