@@ -5,7 +5,7 @@ title: Building a Solver for The Witness
 
 ![_config.yml]({{ site.baseurl }}/images/witness/witness1.jpg)
 
-### 0. Too Lazy to Witness 
+### 0. Inspiration
 
 In case you haven't heard about it, [The Witness is an excellent video game.](http://kotaku.com/the-witness-the-kotaku-review-1754919626) You basically wander alone on a dreamy island and try to solve the puzzles littered around; it's like Professor Layton, but with all the NPCs turned into stones. On top of being a great puzzle/exploration hybrid, The Witness is able to teach its players without any word and exposition. I bought it on day one, and it's well worth it's full price.
 
