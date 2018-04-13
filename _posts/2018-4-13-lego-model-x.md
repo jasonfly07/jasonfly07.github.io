@@ -9,7 +9,7 @@ Lately I got to drive a borrowed Tesla Model X from time to time. I've grown to 
 
 ### Parts
 
-I digged out my Lego box under the bed; there weren't even enough parts to make a car seat. So I bought a set that seems to have lots of car-relevant parts:
+I digged out my Lego stash under the bed; there weren't even enough parts to make a car seat. So I bought a set that seems to have lots of car-relevant parts:
 ![_config.yml]({{ site.baseurl }}/images/lego_modelx/mack.jpg)
 
 ### Keeping things organized
