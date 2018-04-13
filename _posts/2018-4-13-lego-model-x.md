@@ -4,41 +4,35 @@ title: Lego Model X
 ---
 
 ![_config.yml]({{ site.baseurl }}/images/lego_modelx/mx_final_3.jpg)
-
 Because of work, I got to drive Model X from time to time. I've grown to love this awesome car, so I decided to build a Lego version to have it sit nicely on my desk.
 
 ### Parts
 
-I digged out my Lego box under the bed; it was obvious there weren't even enough parts to make a front door. So I bought a set that seems to have lots of car-relevant parts:
-
+I digged out my Lego box under the bed; there weren't even enough parts to make a car seat. So I bought a set that seems to have lots of car-relevant parts:
 ![_config.yml]({{ site.baseurl }}/images/lego_modelx/mack.jpg)
 
 ### Keeping things organized
 
-Since the truck set was predominantly gray, I decided to use gray as the main color of Model X. This means all the white & green liftarms are useless to me. On the other hand, there were ~2600 pieces in this set, so I put those liftarms to good use & kept some of the bigger pieces organized:
-
+Since the truck set was predominantly gray, I decided to use gray as the main color scheme. This means all the white & green liftarms from this set are useless to me. On the other hand, there were ~2600 pieces in this set, so I put those liftarms to good use & kept some of the bigger pieces organized:
 ![_config.yml]({{ site.baseurl }}/images/lego_modelx/lego_rack.jpg)
 
 ### Chassis
 
 There are lots of flat pieces; seems straightforward to use them as the chassis.
-
 ![_config.yml]({{ site.baseurl }}/images/lego_modelx/mx_chassis.jpg)
 
-A bigger challenge is getting the scale right. Since all the wheel are of the same size, I used them to scale every other part. I ended up doing this a lot to make sure I didn't deviate too far from the correct scale:
-
+A bigger challenge is getting the scale right. Since all the wheel are of the same size, I used them to scale every other part. To make sure I didn't deviate too far from the correct scale, I ended up holding it against my monitor every 5 minutes:
 ![_config.yml]({{ site.baseurl }}/images/lego_modelx/mx_scale.jpg)
 
 It also helped to build some kind of scaffolding for the entire car, since at this point, I was doubtful that I could build a realistic Model X with existing parts. It was reassuring to see the shape that captures the essense of it.
+![_config.yml]({{ site.baseurl }}/images/lego_modelx/mx_scaffolding.jpg)
 
 ### Hood & seats
 
 Fortunately, the truck set has a few curved pieces that looks surprisingly similar to the hood.
-
 ![_config.yml]({{ site.baseurl }}/images/lego_modelx/mx_hood.jpg)
 
 There were special pieces from the set for building nice-looking car seats, but there were only enough parts for 2, and I needed at least 6, so I had to stick to standard pieces. I tried my best to re-create the subtle curves & contour of a seat with rigid pieces. This later underwent several iterations.
-
 ![_config.yml]({{ site.baseurl }}/images/lego_modelx/mx_seat.jpg)
 
 ### Falcon wing door
