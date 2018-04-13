@@ -1,10 +1,10 @@
 ---
 layout: post
-title: Lego Model X
+title: Lego Tesla Model X
 ---
 
 ![_config.yml]({{ site.baseurl }}/images/lego_modelx/mx_final_3.jpg)
-Lately I got to drive a borrowed Model X from time to time. I've grown to love this awesome car, so I decided to build a Lego version to have it sit nicely on my desk.
+Lately I got to drive a borrowed Tesla Model X from time to time. I've grown to love this awesome car, so I decided to build a Lego version to have it sit nicely on my desk.
 
 ### Parts
 
