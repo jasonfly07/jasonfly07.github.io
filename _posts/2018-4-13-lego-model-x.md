@@ -5,16 +5,57 @@ title: Lego Model X
 
 ![_config.yml]({{ site.baseurl }}/images/witness/witness1.jpg)
 
-### 0. Inspiration
+Due to work, I got to drive Model X from time to time. It really is an awesome car, and I've grown to love it. Sadly, I can't really afford one, so I decide to build one myself. With Lego.
 
-In case you haven't heard about it, [The Witness is an excellent video game.](http://kotaku.com/the-witness-the-kotaku-review-1754919626) You basically wander alone on a dreamy island and try to solve the puzzles littered around; it's like Professor Layton, but with all the NPCs turned into stones. On top of being a great puzzle/exploration hybrid, The Witness is able to teach its players without any word and exposition. I bought it on day one, and it's well worth it's full price.
+### Parts
 
-All the puzzles in The Witness take the form of path-searching on a rectangular maze. By drawing a path from start to finish, you complete the puzzle by satisfying specific rules. These rules can roughly be divided into 2 groups: **symbolic** and **environmental**. The former comes with symbols on the maze to satisfy (e.g., a black hexagon has to be traversed by the path), while the latter hides its rules and clues in the environment (e.g., the path is indicated by the reflection of sunshine).
+I digged out my Lego box under the bed; it was obvious there weren't even enough parts to make a front door. So I bought a set that seems to have lots of car-relevant parts:
 
-It's a joy to figure out the rules of both, but after a while I found myself looking forward to environmental puzzles more than the symbolic ones. A lot of these symbolic puzzles, ranging from simple path-finding to complex segmentation problems, can be solved with brute-force approaches. As I sat there cutting up small Tetris pieces to figure out a particular torturous Tetris-fitting puzzle, I wonder if this process can be automated. 
+![_config.yml]({{ site.baseurl }}/images/witness/witness1.jpg)
 
-This was when I decided to build a solver to handle some of these puzzles for me. [**The preliminary version is complete, and you can try it here.**](http://jasonfly07.github.io/the-witness-solver-js/)
+### Keeping things organized
 
-The following sections will detail some of the design process, as well as some interesting observations I had when working on it. If you want to check out the (messy) codes, [click here.](https://github.com/jasonfly07/the-witness-solver-js)
+Since the truck set was predominantly gray, I decided to use gray as the main color of Model X. This means all the white & green liftarms are useless to me. On the other hand, there were ~2600 pieces in this set, so I put those liftarms to good use & kept some of the bigger pieces organized:
 
-*Finally, this project is still work in progress. As more types of puzzle elements are supported, this article will be expanded accordingly.*
+![_config.yml]({{ site.baseurl }}/images/witness/witness1.jpg)
+
+### Chassis
+
+There are lots of flat pieces; seems straightforward to use them as the chassis.
+
+![_config.yml]({{ site.baseurl }}/images/witness/witness1.jpg)
+
+A bigger challenge is getting the scale right. Since all the wheel are of the same size, I used them to scale every other part. I ended up doing this a lot to make sure I didn't deviate too far from the correct scale:
+
+![_config.yml]({{ site.baseurl }}/images/witness/witness1.jpg)
+
+It also helped to build some kind of scaffolding for the entire car, since at this point, I was doubtful that I could build a realistic Model X with existing parts. It was reassuring to see the shape that captures the essense of it.
+
+### Hood & seats
+
+Fortunately, the truck set has a few curved pieces that looks surprisingly similar to the hood.
+
+![_config.yml]({{ site.baseurl }}/images/witness/witness1.jpg)
+
+There were special pieces from the set for building nice-looking car seats, but there were only enough parts for 2, and I needed at least 6, so I had to stick to standard pieces. I tried my best to re-create the subtle curves & contour of a seat with rigid pieces. This later underwent several iterations.
+
+![_config.yml]({{ site.baseurl }}/images/witness/witness1.jpg)
+
+### Falcon wing door
+
+This is a big problem, since falcon wing doors & their frames are tilted, and it's usually not easy to assemble Lego pieces that are not perpendicular to one another; you need extra parts to constrain their movement. The first version of door frame was flimsy as hell:
+
+![_config.yml]({{ site.baseurl }}/images/witness/witness1.jpg)
+
+It took a lot of support pieces to keep everything steady, but then it looked like a mess:
+
+![_config.yml]({{ site.baseurl }}/images/witness/witness1.jpg)
+
+The doors are equally tricky to get the shape correct; the pieces barely fit together in this one:
+
+![_config.yml]({{ site.baseurl }}/images/witness/witness1.jpg)
+
+But it's still nice to see the falcon wing coming to life!
+
+![_config.yml]({{ site.baseurl }}/images/witness/witness1.jpg)
+
