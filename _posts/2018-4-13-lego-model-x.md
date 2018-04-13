@@ -5,7 +5,7 @@ title: Lego Model X
 
 ![_config.yml]({{ site.baseurl }}/images/lego_modelx/mack.jpg)
 
-Due to work, I got to drive Model X from time to time. It really is an awesome car, and I've grown to love it. Sadly, I can't really afford one, so I decide to build one myself. With Lego.
+Because of work, I got to drive Model X from time to time. I've grown to love this awesome car, so I decided to build a Lego version to have it sit nicely on my desk.
 
 ### Parts
 
@@ -45,17 +45,17 @@ There were special pieces from the set for building nice-looking car seats, but 
 
 This is a big problem, since falcon wing doors & their frames are tilted, and it's usually not easy to assemble Lego pieces that are not perpendicular to one another; you need extra parts to constrain their movement. The first version of door frame was flimsy as hell:
 
-![_config.yml]({{ site.baseurl }}/images/witness/witness1.jpg)
+![_config.yml]({{ site.baseurl }}/images/lego_modelx/mx_falcon_frame.jpg)
 
 It took a lot of support pieces to keep everything steady, but then it looked like a mess:
 
-![_config.yml]({{ site.baseurl }}/images/witness/witness1.jpg)
+![_config.yml]({{ site.baseurl }}/images/lego_modelx/mx_support.jpg)
 
 The doors are equally tricky to get the shape correct; the pieces barely fit together in this one:
 
-![_config.yml]({{ site.baseurl }}/images/witness/witness1.jpg)
+![_config.yml]({{ site.baseurl }}/images/lego_modelx/mx_ugly_door.jpg)
 
 But it's still nice to see the falcon wing coming to life!
 
-![_config.yml]({{ site.baseurl }}/images/witness/witness1.jpg)
+![_config.yml]({{ site.baseurl }}/images/lego_modelx/mx_first_falcon_wing.jpg)
 
