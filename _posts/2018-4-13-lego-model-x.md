@@ -3,7 +3,7 @@ layout: post
 title: Lego Model X
 ---
 
-![_config.yml]({{ site.baseurl }}/images/witness/witness1.jpg)
+![_config.yml]({{ site.baseurl }}/images/lego_modelx/mack.jpg)
 
 Due to work, I got to drive Model X from time to time. It really is an awesome car, and I've grown to love it. Sadly, I can't really afford one, so I decide to build one myself. With Lego.
 
@@ -11,7 +11,7 @@ Due to work, I got to drive Model X from time to time. It really is an awesome c
 
 I digged out my Lego box under the bed; it was obvious there weren't even enough parts to make a front door. So I bought a set that seems to have lots of car-relevant parts:
 
-![_config.yml]({{ site.baseurl }}/images/witness/witness1.jpg)
+![_config.yml]({{ site.baseurl }}/images/lego_modelx/mack.jpg)
 
 ### Keeping things organized
 
